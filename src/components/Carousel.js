@@ -1,33 +1,65 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Card, CardContent } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 const ImageCarousel = ({ images }) => {
-    const cardStyle = {
-        padding: '16px', // Add padding to the card
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional: Add a subtle box shadow
+    const imageStyle = {
+        width: '350px',
+        height: '300px',
     };
 
-    const imageStyle = {
-        width: '100%', // Make the image fill the card
-        height: 'auto', // Maintain aspect ratio
+    const swiperParams = {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 75,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: true,
+        modules: [EffectCoverflow, Pagination, Autoplay],
+        autoplay: { delay: 2500, disableOnInteraction: false },
+        speed: 1500,
+        lazy: true,
+        spaceBetween: 30,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
     };
 
     return (
-        <Carousel>
+        <Swiper {...swiperParams}  style={{ paddingTop: '60px' }}>
             {images.map((image, index) => (
-                <Card key={index} style={cardStyle}>
-                    <CardContent>
-                        <img
-                            src={image.url}
-                            alt={`Image ${index + 1}`}
-                            style={imageStyle}
-                        />
-                    </CardContent>
-                </Card>
+                <SwiperSlide key={index}>
+                    <img
+                        src={image.url}
+                        alt={`Image ${index + 1}`}
+                        style={imageStyle}
+                    />
+                </SwiperSlide>
             ))}
-        </Carousel>
+        </Swiper>
     );
 };
 
