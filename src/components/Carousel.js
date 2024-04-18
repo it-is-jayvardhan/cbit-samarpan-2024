@@ -17,7 +17,7 @@ const ImageCarousel = ({ images }) => {
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
-            rotate: 75,
+            rotate: 50,
             stretch: 0,
             depth: 100,
             modifier: 1,
@@ -28,22 +28,25 @@ const ImageCarousel = ({ images }) => {
         autoplay: { delay: 2500, disableOnInteraction: false },
         speed: 1500,
         lazy: true,
-        spaceBetween: 30,
+        spaceBetween: 20,
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 1,
+                slidesPerView:1,
                 spaceBetween: 10,
+                centeredSlides: true,
             },
             // when window width is >= 480px
             480: {
                 slidesPerView: 2,
                 spaceBetween: 20,
+                centeredSlides: true,
             },
             // when window width is >= 640px
             640: {
                 slidesPerView: 3,
                 spaceBetween: 30,
+                centeredSlides: true,
             },
         },
     };
