@@ -17,7 +17,7 @@ const ImageCarousel = ({ images }) => {
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
-            rotate: 50,
+            rotate: 70,
             stretch: 0,
             depth: 100,
             modifier: 1,
@@ -25,7 +25,7 @@ const ImageCarousel = ({ images }) => {
         },
         pagination: true,
         modules: [EffectCoverflow, Pagination, Autoplay],
-        autoplay: { delay: 2500, disableOnInteraction: false },
+        autoplay: { delay: 500, disableOnInteraction: false },
         speed: 1500,
         lazy: true,
         spaceBetween: 20,

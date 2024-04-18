@@ -13,12 +13,18 @@ const Home = () => {
         trackMouse: true
     });
     const sampleImages = [
-        {url:'https://github.com/AMBITION-GROUP-OF-ORG/cbit-samarpan-2023/blob/main/samarpan%2012-05-23%20pics/img1.jpeg?raw=true'},
-        { url: 'https://github.com/AMBITION-GROUP-OF-ORG/cbit-samarpan-2023/blob/main/gallery-samarpan/im1.jpg?raw=true' },
-        { url: 'https://github.com/AMBITION-GROUP-OF-ORG/cbit-samarpan-2023/blob/main/gallery-samarpan/img4.jpg?raw=true' },
-        {url:'https://github.com/AMBITION-GROUP-OF-ORG/cbit-samarpan-2023/blob/main/gallery-samarpan/img5.jpeg?raw=true'},
-        {url:'https://github.com/AMBITION-GROUP-OF-ORG/cbit-samarpan-2023/blob/main/gallery-samarpan/im3.jpg?raw=true'},
-        {url:'https://github.com/AMBITION-GROUP-OF-ORG/cbit-samarpan-2023/blob/main/gallery-samarpan/invitation.jpeg?raw=true'},
+        // {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img1.jpg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img2.jpeg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img3.jpeg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img4.jpg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img5.jpg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img7%20(2).jpg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img7.jpg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img8.jpg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img9.jpg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img11.jpg?raw=true'},
+        {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img12.jpg?raw=true'},
+        // {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img10.jpgraw=true'},
         // Add more image URLs as needed
     ];
 
