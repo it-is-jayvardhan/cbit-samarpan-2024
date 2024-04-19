@@ -9,6 +9,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import HomeIcon from '@mui/icons-material/Home';
 import RegistrationIcon from '@mui/icons-material/Assignment';
+import "./navbar.css";
 import {
   MemoryRouter,
   Link,
@@ -16,7 +17,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
-import { AppBar, Avatar, Card, CardContent, Grid, IconButton } from '@mui/material';
+import { AppBar, Avatar, Card, CardContent, Grid } from '@mui/material';
 
 function Router(props) {
   const { children } = props;
@@ -84,17 +85,24 @@ export default function Navbar() {
 </Grid>
 <Grid item xs={10}>
 <Typography variant={matches ? 'h4' : 'h6'}    color="text.secondary">
-              C ByreGowda Institute of Technology
+              C Byre Gowda Institute of Technology
             </Typography>
             </Grid>
            </Grid>
 
           </CardContent>
         </Card>
-      <AppBar position='static'>
-        <Typography variant='h4'>Samarpan 2024</Typography>
-      
-      </AppBar>
+        <AppBar position='static' style={{ background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)', boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)' }}>
+        <Typography variant='h4' style={{ 
+  fontFamily: '"Feast of Flesh BB", cursive',
+  color: 'white', 
+  fontWeight: 'bold', 
+  textShadow: '2px 2px 4px #000000',
+  letterSpacing:'0.2em'
+}}>
+  Samarpan 2024
+</Typography>
+</AppBar>
         <MyTabs />
       </Box>
   );

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Feast of Flesh BB';
+    src: local('Feast of Flesh BB'), 
+         url('./fonts/feast_of_flesh_bb/FEASFBI_.TTF') format('truetype'),
+         url('./fonts/feast_of_flesh_bb/FEASFBRG.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .title {
+    font-family: 'Feast of Flesh BB', cursive;
+  }
+  
+  

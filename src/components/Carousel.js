@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 const ImageCarousel = ({ images }) => {
-    const imageStyle = {
+    const carouselStyle = {
         width: '350px',
         height: '300px',
     };
@@ -57,8 +57,8 @@ const ImageCarousel = ({ images }) => {
                 <SwiperSlide key={index}>
                     <img
                         src={image.url}
-                        alt={`Image ${index + 1}`}
-                        style={imageStyle}
+                        alt={`snap ${index + 1}`}
+                        style={carouselStyle}
                     />
                 </SwiperSlide>
             ))}
