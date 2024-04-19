@@ -27,7 +27,7 @@ const ImageCarousel = ({ images }) => {
         modules: [EffectCoverflow, Pagination, Autoplay],
         autoplay: { delay: 500, disableOnInteraction: false },
         speed: 1500,
-        lazy: true,
+        
         spaceBetween: 20,
         breakpoints: {
             // when window width is >= 320px

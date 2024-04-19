@@ -1,17 +1,9 @@
 // src/components/ImageCarousel.js
 import Carousel from './Carousel.js';
-import { Navigate, useNavigate, } from 'react-router-dom';
-import { useSwipeable, } from 'react-swipeable';
+
 const Home = () => {
     // Sample image URLs (replace with your actual image URLs)
-    const history = useNavigate();
 
-    const handlers = useSwipeable({
-        
-        onSwipedRight: () => Navigate('/Registration'),
-        preventDefaultTouchmoveEvent: true,
-        trackMouse: true
-    });
     const sampleImages = [
         // {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img1.jpg?raw=true'},
         {url:'https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/homepage/img2.jpeg?raw=true'},
@@ -29,10 +21,9 @@ const Home = () => {
     ];
 
     return (
-        <div {...handlers}>
-            {/* Other components */}
+        <div >
+          
             <Carousel images={sampleImages} />
-            {/* Other components */}
         </div>
     );
 };

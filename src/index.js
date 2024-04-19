@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
+import Loading from './components/loading.js';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import "./components/firebase.js";
+const App=lazy(()=>import('./App.js'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Suspense fallback={<Loading/>}>
     <BrowserRouter><App /></BrowserRouter>
+    </Suspense>
   
   </React.StrictMode>
 );
