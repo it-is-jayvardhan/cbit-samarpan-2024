@@ -1,0 +1,17 @@
+.tableGradient {
+    background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+  }
+ .header{
+    color:white !important;
+    font-weight: bold;
+    font-style: bold;
+ } 
+ @font-face {
+   font-family: 'Jersey 15';
+   src: url('../fonts/Jersey_15/Jersey15-Regular.ttf') format('truetype');
+ }
+ @font-face {
+  font-family: 'Lugrasimo';
+  src: url('../fonts/Lugrasimo/Lugrasimo-Regular.ttf') format('truetype');
+}
+ 

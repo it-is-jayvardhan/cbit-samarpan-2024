@@ -9,5 +9,14 @@
   .title {
     font-family: 'Feast of Flesh BB', cursive;
   }
-  
-  
+ 
+  .text-gradient-s {
+    /* Gradient from light red to dark red */
+    background: linear-gradient(to right,rgb(255, 0, 255),rgba(255, 0, 255, 0.686));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: viol;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+    

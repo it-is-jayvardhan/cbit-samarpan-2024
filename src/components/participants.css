@@ -1,0 +1,14 @@
+.animatedButton {
+    padding-top: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    will-change: transform, box-shadow;
+  }
+  
+  .animatedButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  @font-face {
+    font-family: 'Lugrasimo';
+    src: url('../fonts/Lugrasimo/Lugrasimo-Regular.ttf') format('truetype');
+  }

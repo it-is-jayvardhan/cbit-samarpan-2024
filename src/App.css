@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.swiper-slide {
+  background: linear-gradient(120deg, #fddb92 0%, #d1fdff 100%);
+  /* Additional styles for your carousel */
+}
+#bg {
+  width: 100vw;
+  height: 100vh; /* Change to viewport height to cover the full screen height */
+  min-height: 100%; /* Ensure it covers the content if it's taller than the screen */
+  margin: 0;
+  padding: 0;
+  background-image: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center center; /* Center the image properly */
+  background-repeat: repeat repeat-y; 
+  background-attachment: fixed; /* Optional: Fix the background relative to the viewport */
+}
