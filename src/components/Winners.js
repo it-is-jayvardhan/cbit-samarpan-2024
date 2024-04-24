@@ -10,9 +10,9 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useTheme,createTheme ,ThemeProvider } from '@mui/material/styles';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
-import "../table.css"
-const SHEET_ID=process.env.REACT_APP_GOOGLE_SHEETS_ID;
-const APIKEY = process.env.REACT_APP_GOOGLE_SHEETS_API_KEY;
+import "../components/table.css"
+const SHEET_ID="1Ew8DnIdPGH3hYMVAbAodUa_d0BmpCK4GmP7coAyxO28";
+const APIKEY = "AIzaSyAGlO1an1E5OexMPgebcp9t2C_coUEphHs";
 //table styling
 const useStyles = makeStyles(() =>{
     const theme=useTheme();
@@ -91,7 +91,7 @@ const useStyles = makeStyles(() =>{
   });
 
 
-export default function Cooking(){
+export default function Winners(){
     const classes = useStyles();
     const [data,setData]=useState([]);
     useEffect(() => {
@@ -100,31 +100,31 @@ export default function Cooking(){
                 const doc=new GoogleSpreadsheet(SHEET_ID,{apiKey:APIKEY});
            
             await doc.loadInfo();
-            const firstSheet=doc.sheetsByIndex[7];
+            // console.log(doc.title);
+            const firstSheet=doc.sheetsByIndex[0];
+            // console.log()
+            // console.log(firstSheet);
             const rows = await firstSheet.getRows();
             // console.log(rows);
+            // alert(rows);
 
             //displaying values of cells
             const mappedData = rows.map(row => ({
-                timestamp: row._rawData[0],
-                email:row._rawData[1],
-                name: row._rawData[2],
-                usn: row._rawData[3],
-                sem: row._rawData[4],
-                branch: row._rawData[5],
-                contact:row._rawData[6],
-                nameAndUsnTeam:row._rawData[7],
-                agreement:row._rawData[8],
+              timestamp: row._rawData[0],
+              name: row._rawData[1],
+              usn: row._rawData[2],
+              sem: row._rawData[3],
+              branch: row._rawData[4],
+              event:row._rawData[5],
+              position:row._rawData[6],
+             
               }));
-              
               setData(mappedData);
-           
-              
-            //   console.log(processedData);
+              // console.log(mappedData);
 
            
             }catch(error){
-                console.error(error);
+                alert(error);
                 
             }
             
@@ -143,35 +143,36 @@ export default function Cooking(){
   letterSpacing:'0.2em',
 //   WebkitTextStroke: '1px black'
 }}>
-            Cooking Without Fire Participants
+            Winners
             </Typography>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
-            <TableRow className='header'>
-              <TableCell className={classes.header}>Sl.no</TableCell>
+          <TableRow className='header'>
+            <TableCell className={classes.header}>Sl.no</TableCell>
               <TableCell className={classes.header}>NAME</TableCell>
+              <TableCell className={classes.header}>USN</TableCell>
               <TableCell className={classes.header}>SEM</TableCell>
               <TableCell className={classes.header}>BRANCH</TableCell>
-              <TableCell className={classes.header}>USN</TableCell>
-              <TableCell className={classes.header}>Name&usn of Team</TableCell>
+              <TableCell className={classes.header}>EVENT</TableCell>
+              <TableCell className={classes.header}>POSITION</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-  {data.map((item, index) => (
-   item.agreement === "I Agree" ? (
+          {data.map((item, index) => (
+
     <TableRow key={index} className={classes.row}>
       <TableCell className={classes.cell}>{index + 1}</TableCell>
       <TableCell className={classes.cell}>{item.name}</TableCell>
+      <TableCell className={classes.cell}>{item.usn}</TableCell>
       <TableCell className={classes.cell}>{item.sem}</TableCell>
       <TableCell className={classes.cell}>{item.branch}</TableCell>
-      <TableCell className={classes.cell}>{item.usn}</TableCell>
-      <TableCell className={classes.cell}>{item.nameAndUsnTeam}</TableCell>
+      <TableCell className={classes.cell}>{item.event}</TableCell>
+      <TableCell className={classes.cell}>{item.position}</TableCell>
     </TableRow>
-  ) : null
+  
   ))}
-</TableBody>
-
+          </TableBody>
         </Table>
       </TableContainer>
       </ThemeProvider>

@@ -25,6 +25,7 @@ const CulturalScreening=lazy(()=>import('./components/events/Cultural.js'));
 const TreasureHunt=lazy(()=>import('./components/events/treasureHunt.js'));
 const DumbSharades=lazy(()=>import('./components/events/dumbSharades.js'));
 const Cooking=lazy(()=>import('./components/events/cookingWithoutFire.js'));
+const Winners=lazy(()=>import('./components/Winners.js'));
 
 function App() {
   useEffect(()=>{
@@ -80,6 +81,7 @@ function App() {
         <Route path="/TreasureHunt" element={<TreasureHunt/>}/>
         <Route path="/DumbSharades" element={<DumbSharades/>}/>
         <Route path="/Cooking" element={<Cooking/>}/>
+        <Route path="/Winners" element={<Winners/>}/>
         </Routes>
         </Suspense>
         <br/><br/><br/>

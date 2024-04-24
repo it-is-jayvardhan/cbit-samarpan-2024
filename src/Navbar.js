@@ -12,6 +12,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import CssBaseline from '@mui/material/CssBaseline';
 // import RegistrationIcon from '@mui/icons-material/Assignment';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import {  EventNote } from '@mui/icons-material';
 import "./navbar.css";
 import {
@@ -59,7 +60,7 @@ function MyTabs() {
   // This means that if you have nested routes like:
   // users, users/new, users/edit.
   // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch(['/', '/Registration','/Participants']);
+  const routeMatch = useRouteMatch(['/', '/Registration','/Participants','/Winners']);
   const currentTab = routeMatch?.pattern?.path;
 
   return (
@@ -68,6 +69,7 @@ function MyTabs() {
       <Tab icon={<HomeIcon />} label="Home" value="/" to="/" component={Link} />
       <Tab icon={<EventNote />}  label="Events" value="/Registration" to="/Registration" component={Link} />
       <Tab icon={<PeopleIcon />}   label="Participants" value="/Participants" to="/Participants" component={Link} />
+      <Tab icon={<EmojiEventsIcon  />}   label="Winners" value="/Winners" to="/Winners" component={Link} />
       {/* <Tab icon={<PhotoLibraryIcon  />}   label="Gallery" value="" to="" component={Link} /> */}
       {/* <Tab icon={<PeopleIcon />}   label="Samarpan" value="" to="" component={Link} /> */}
     </Tabs>
