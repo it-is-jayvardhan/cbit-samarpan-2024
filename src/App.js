@@ -26,30 +26,31 @@ const TreasureHunt=lazy(()=>import('./components/events/treasureHunt.js'));
 const DumbSharades=lazy(()=>import('./components/events/dumbSharades.js'));
 const Cooking=lazy(()=>import('./components/events/cookingWithoutFire.js'));
 const Winners=lazy(()=>import('./components/Winners.js'));
+const Gallery=lazy(()=>import('./components/Gallery.js'));
 
 function App() {
   useEffect(()=>{
-    const birdsEffect =BIRDS({
-      el:"#bg",
-      mouseControls: true,
-  touchControls: true,
-  gyroControls: true,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  backgroundColor: "#85c4ec",
-  color2: 0x812be,
-  birdSize: 1.30,
-  separation: 44.00,
-  alignment: 28.00,
-  cohesion: 43.00,
-  quantity: 3.00,
-  backgroundAlpha: 0 // Set the background to transparent
-    })
+  //   const birdsEffect =BIRDS({
+  //     el:"#bg",
+  //     mouseControls: true,
+  // touchControls: true,
+  // gyroControls: true,
+  // scale: 1.00,
+  // scaleMobile: 1.00,
+  // backgroundColor: "#85c4ec",
+  // color2: 0x812be,
+  // birdSize: 1.30,
+  // separation: 44.00,
+  // alignment: 28.00,
+  // cohesion: 43.00,
+  // quantity: 3.00,
+  // backgroundAlpha: 0 // Set the background to transparent
+  //   })
 
-    return () => {
-      if (birdsEffect) birdsEffect.destroy();
+  //   return () => {
+  //     if (birdsEffect) birdsEffect.destroy();
       
-    };
+  //   };
     
   },[])
   return (
@@ -81,6 +82,7 @@ function App() {
         <Route path="/DumbSharades" element={<DumbSharades/>}/>
         <Route path="/Cooking" element={<Cooking/>}/>
         <Route path="/Winners" element={<Winners/>}/>
+        <Route path="/Gallery" element={<Gallery/>}/>
         </Routes>
         </Suspense>
         <br/><br/><br/>

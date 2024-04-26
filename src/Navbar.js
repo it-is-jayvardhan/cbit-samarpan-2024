@@ -14,6 +14,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 // import RegistrationIcon from '@mui/icons-material/Assignment';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import {  EventNote } from '@mui/icons-material';
+import { PhotoLibrary } from '@mui/icons-material';
+import {makeStyles} from '@mui/styles';
 import "./navbar.css";
 import {
   MemoryRouter,
@@ -23,6 +25,10 @@ import {
 } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
 import { AppBar, Avatar, Card, CardContent, Grid } from '@mui/material';
+
+
+
+
 
 function Router(props) {
   const { children } = props;
@@ -55,22 +61,57 @@ function useRouteMatch(patterns) {
   return null;
 }
 
+const tryStyles = makeStyles(() => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    '@media (max-width: 600px)': { // Adjust breakpoint as needed
+      '& > button': { // Target tab buttons
+        minWidth: '40px !important', // Set minimum width for icons
+        padding: 0, // Remove default padding
+      },
+    },
+  },
+}));
 function MyTabs() {
   // You need to provide the routes in descendant order.
   // This means that if you have nested routes like:
   // users, users/new, users/edit.
   // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch(['/', '/Registration','/Participants','/Winners']);
+  const classes = tryStyles();
+  const routeMatch = useRouteMatch(['/', '/Registration','/Participants','/Winners','/Gallery']);
   const currentTab = routeMatch?.pattern?.path;
 
   return (
-    <Tabs value={currentTab} textColor="secondary"
-    indicatorColor="secondary" centered>
-      <Tab icon={<HomeIcon />} label="Home" value="/" to="/" component={Link} />
-      <Tab icon={<EventNote />}  label="Events" value="/Registration" to="/Registration" component={Link} />
-      <Tab icon={<PeopleIcon />}   label="Participants" value="/Participants" to="/Participants" component={Link} />
-      <Tab icon={<EmojiEventsIcon  />}   label="Winners" value="/Winners" to="/Winners" component={Link} />
-      {/* <Tab icon={<PhotoLibraryIcon  />}   label="Gallery" value="" to="" component={Link} /> */}
+    <Tabs value={currentTab} textColor="secondary" variant='fullWidth'
+    indicatorColor="secondary" centered style={{ display: 'flex', justifyContent: 'center', }} className={classes.root} sx={{maxWidth:{
+      xs:"100vw"
+    }}}>
+      <Tab icon={<HomeIcon />} label="Home" value="/" to="/" component={Link} sx={{fontSize:{
+         xs: '0.5rem', // for small screens
+      sm: '0.875rem', // for medium screens
+      md: '1rem', // for large screens
+      }}} />
+      <Tab icon={<EventNote />}  label="Events" value="/Registration" to="/Registration" component={Link} sx={{fontSize:{
+         xs: '0.5rem', // for small screens
+      sm: '0.875rem', // for medium screens
+      md: '1rem', // for large screens
+      }}}/>
+      <Tab icon={<PeopleIcon />}   label="Participants" value="/Participants" to="/Participants" component={Link}sx={{fontSize:{
+         xs: '0.5rem', // for small screens
+      sm: '0.875rem', // for medium screens
+      md: '1rem', // for large screens
+      }}} />
+      <Tab icon={<EmojiEventsIcon  />}   label="Winners" value="/Winners" to="/Winners" component={Link} sx={{fontSize:{
+         xs: '0.5rem', // for small screens
+      sm: '0.875rem', // for medium screens
+      md: '1rem', // for large screens
+      }}}/>
+      <Tab icon={<PhotoLibrary  />}   label="Gallery" value="/Gallery" to="/Gallery" component={Link}sx={{fontSize:{
+         xs: '0.5rem', // for small screens
+      sm: '0.875rem', // for medium screens
+      md: '1rem', // for large screens
+      }}} />
       {/* <Tab icon={<PeopleIcon />}   label="Samarpan" value="" to="" component={Link} /> */}
     </Tabs>
   );
