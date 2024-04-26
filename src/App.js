@@ -57,7 +57,6 @@ function App() {
       <div id="app">
       <div id="birds">
     <div className="App">
-     
       <Navbar />
       <Suspense fallback={<Loading/>}>
       <Routes>

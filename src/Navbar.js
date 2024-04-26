@@ -142,6 +142,7 @@ export default function Navbar(props) {
 </Typography>
 </AppBar>
 </ElevationScroll>
+<marquee><a href='https://docs.google.com/document/d/1VAiQ6e3rsOFfutOOMiEL54_pv676jsLt/edit?usp=sharing&ouid=108538715293005607808&rtpof=true&sd=true'><Typography variant='h6' sx={{color:"black"}}>Circular:- On Stage Events</Typography></a></marquee>
         <MyTabs />
       </Box>
      
