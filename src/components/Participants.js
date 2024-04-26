@@ -5,7 +5,7 @@ import OutdoorGrillIcon from '@mui/icons-material/OutdoorGrill';
 import QuizIcon from '@mui/icons-material/Quiz';
 // import SearchIcon from '@mui/icons-material/Search';
 import ExploreIcon from '@mui/icons-material/Explore';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
+// import CameraAltIcon from '@mui/icons-material/CameraAlt';
 // import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import GestureIcon from '@mui/icons-material/Gesture';
 import MicIcon from '@mui/icons-material/Mic';

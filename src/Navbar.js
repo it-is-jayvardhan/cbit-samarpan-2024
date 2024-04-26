@@ -81,33 +81,38 @@ function MyTabs() {
   const classes = tryStyles();
   const routeMatch = useRouteMatch(['/', '/Registration','/Participants','/Winners','/Gallery']);
   const currentTab = routeMatch?.pattern?.path;
-
+  const customStyles = {
+    tab: {
+      minWidth: '10px', // Adjust the minimum width as needed
+      width: '10vw',    // Adjust the width as needed
+    }
+  };
   return (
     <Tabs value={currentTab} textColor="secondary" variant='fullWidth'
     indicatorColor="secondary" centered style={{ display: 'flex', justifyContent: 'center', }} className={classes.root} sx={{maxWidth:{
       xs:"100vw"
     }}}>
-      <Tab icon={<HomeIcon />} label="Home" value="/" to="/" component={Link} sx={{fontSize:{
+      <Tab style={customStyles.tab} icon={<HomeIcon />} label="Home" value="/" to="/" component={Link} sx={{fontSize:{
          xs: '0.5rem', // for small screens
       sm: '0.875rem', // for medium screens
       md: '1rem', // for large screens
       }}} />
-      <Tab icon={<EventNote />}  label="Events" value="/Registration" to="/Registration" component={Link} sx={{fontSize:{
+      <Tab style={customStyles.tab} icon={<EventNote />}  label="Events" value="/Registration" to="/Registration" component={Link} sx={{fontSize:{
          xs: '0.5rem', // for small screens
       sm: '0.875rem', // for medium screens
       md: '1rem', // for large screens
       }}}/>
-      <Tab icon={<PeopleIcon />}   label="Participants" value="/Participants" to="/Participants" component={Link}sx={{fontSize:{
+      <Tab style={customStyles.tab} icon={<PeopleIcon />}   label="Participants" value="/Participants" to="/Participants" component={Link}sx={{fontSize:{
          xs: '0.5rem', // for small screens
       sm: '0.875rem', // for medium screens
       md: '1rem', // for large screens
       }}} />
-      <Tab icon={<EmojiEventsIcon  />}   label="Winners" value="/Winners" to="/Winners" component={Link} sx={{fontSize:{
+      <Tab style={customStyles.tab} icon={<EmojiEventsIcon  />}   label="Winners" value="/Winners" to="/Winners" component={Link} sx={{fontSize:{
          xs: '0.5rem', // for small screens
       sm: '0.875rem', // for medium screens
       md: '1rem', // for large screens
       }}}/>
-      <Tab icon={<PhotoLibrary  />}   label="Gallery" value="/Gallery" to="/Gallery" component={Link}sx={{fontSize:{
+      <Tab style={customStyles.tab} icon={<PhotoLibrary  />}   label="Gallery" value="/Gallery" to="/Gallery" component={Link}sx={{fontSize:{
          xs: '0.5rem', // for small screens
       sm: '0.875rem', // for medium screens
       md: '1rem', // for large screens
@@ -182,8 +187,17 @@ export default function Navbar(props) {
   Samarpan-2024
 </Typography>
 </AppBar>
-</ElevationScroll>
-<marquee><a href='https://docs.google.com/document/d/1VAiQ6e3rsOFfutOOMiEL54_pv676jsLt/edit?usp=sharing&ouid=108538715293005607808&rtpof=true&sd=true'><Typography variant='h6' sx={{color:"black"}}>Circular:- On Stage Events</Typography></a></marquee>
+</ElevationScroll><marquee>
+  <div style={{display: "flex", alignItems: "center",color:"black"}}>
+    <div>
+      <img src="https://github.com/AMBITION-GROUP-OF-ORG/cbit-samarpan-2023/blob/main/gallery-samarpan/announcements_gif.gif?raw=true" alt='notifcation' height="30px"/>
+    </div>
+    <div>
+      <h5>Circular/Announcements</h5>
+    </div>
+  </div>
+</marquee>
+
         <MyTabs />
       </Box>
      
