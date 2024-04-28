@@ -100,7 +100,7 @@ export default function Photography(){
                 const doc=new GoogleSpreadsheet(SHEET_ID,{apiKey:APIKEY});
            
             await doc.loadInfo();
-            const firstSheet=doc.sheetsByIndex[7];
+            const firstSheet=doc.sheetsByIndex[1];
             const rows = await firstSheet.getRows();
             // console.log(rows);
 
@@ -112,6 +112,9 @@ export default function Photography(){
                 sem: row._rawData[4],
                 branch: row._rawData[5],                
                 usn: row._rawData[3],
+                contact:row._rawData[6],
+                photoLink:row._rawData[7],
+                agreement:row._rawData[8]
               }));
               console.log(mappedData);
               setData(mappedData);
@@ -130,7 +133,7 @@ export default function Photography(){
       }, []);
     return(<>
     <ThemeProvider theme={tableTheme}>
-    <Typography variant="h3" style={{ 
+    <Typography variant="h5" style={{ 
   fontFamily: '"Feast of Flesh BB", cursive',
   color: 'white', 
   fontWeight: 'bold', 
@@ -149,6 +152,7 @@ export default function Photography(){
               <TableCell className={classes.header}>SEM</TableCell>
               <TableCell className={classes.header}>BRANCH</TableCell>
               <TableCell className={classes.header}>USN's</TableCell>
+              <TableCell className={classes.header}>Photo Submitted</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -159,6 +163,7 @@ export default function Photography(){
                 <TableCell className={classes.cell}>{item.sem}</TableCell>
               <TableCell className={classes.cell}>{item.branch}</TableCell>
               <TableCell className={classes.cell}>{item.usn}</TableCell>
+              <a href={item.photoLink}><TableCell className={classes.cell}>Link to Photo</TableCell></a>
                 </TableRow>
             ))}
           </TableBody>

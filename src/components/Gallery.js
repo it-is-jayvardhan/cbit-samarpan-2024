@@ -47,6 +47,24 @@ export default function Gallery(){
         < ImageView title="Cooking without fire" link="https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/cooking-without-fire/IMG-20240426-WA0002.jpg?raw=true"/>
         <br/>
         </Grid>
+        <Grid item xs={12} sm={4}>
+        <StyledCard sx={{sm:3}}>
+                    <CardContent>
+        <Typography variant='h4' style={{ 
+    fontFamily: '"Pacifico", cursive',
+    color: 'white', 
+    fontWeight: 'bold', 
+    textShadow: '3px 3px 6px #000000, 0 0 0 #000, 2px 2px 0 #000',
+    letterSpacing:'0.2em',
+    WebkitTextStroke: '1px black'
+  }}>
+    Cooking without Fire Yt link
+  </Typography>
+        </CardContent>
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/Nss_fjdRV6c?si=cVs5gDbqqNbu4i3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </StyledCard>
+        </Grid>
+        <br/>
         <Grid item xs={12} sm={4}  >
         < ImageView title="" link="https://github.com/it-is-jayvardhan/samarpan-2024-gallery/blob/master/cooking-without-fire/IMG-20240426-WA0003.jpg?raw=true"/>
         <br/>

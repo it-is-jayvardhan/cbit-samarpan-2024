@@ -100,7 +100,7 @@ export default function Debate(){
                 const doc=new GoogleSpreadsheet(SHEET_ID,{apiKey:APIKEY});
            
             await doc.loadInfo();
-            const firstSheet=doc.sheetsByIndex[6];
+            const firstSheet=doc.sheetsByIndex[8];
             const rows = await firstSheet.getRows();
             // console.log(rows);
 

@@ -105,7 +105,7 @@ const useStyles = makeStyles(() =>{
     createData('02/05/2024', [ '2.00-04.00 PM'], [ 'CULTURAL SCREENING'],['PROF.BHANUPRAKASH(MAT)'],['Basic Science Dept'],[{href:"https://forms.gle/7GMaAMWuzA8zNWhR6", text:"Cultural Screening link"}]),
     
     createData('03/05/2024', ['10.00-1.00 PM'], ['SAMARPAN INAGURATION'],['PROF.CHOWDA REDDY (ME)'],['PROF.KAVYA S (ECE)'],[{}]),
-    createData('03/05/2024', ['10.00-12.00 PM'], ['ANTHAKSHARI'],['PROF.MANJULA SS (ME)'],['PROF.VIDHYA CS (ME)'],[{}]),
+    createData('03/05/2024', ['10.00-12.00 PM'], ['ANTHAKSHARI'],['PROF.MANJULA SS (CSE)'],['PROF.VIDHYA (ME)'],[{href:"https://forms.gle/NuKSLVG72DwFn9aF9",text:"Anthyakshari Reg link"}]),
     createData('03/05/2024', [ '2.00-4.00 PM'], [ 'MR&MRS ETHNIC (ETHNIC DAY)'],['PROF.VEDHAVATHY RP(CV)'],['PROF.THANUJA PN (BIO)','PROF.ASHOK BABU(AIML)'],[{}]),
     
     // ... add more rows as needed

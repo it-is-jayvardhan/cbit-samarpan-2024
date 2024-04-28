@@ -100,7 +100,7 @@ export default function Painting(){
                 const doc=new GoogleSpreadsheet(SHEET_ID,{apiKey:APIKEY});
            
             await doc.loadInfo();
-            const firstSheet=doc.sheetsByIndex[14];
+            const firstSheet=doc.sheetsByIndex[16];
             const rows = await firstSheet.getRows();
             // console.log(rows);
 

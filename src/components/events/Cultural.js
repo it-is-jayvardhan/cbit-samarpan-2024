@@ -100,7 +100,7 @@ export default function CulturalScreening(){
                 const doc=new GoogleSpreadsheet(SHEET_ID,{apiKey:APIKEY});
            
             await doc.loadInfo();
-            const firstSheet=doc.sheetsByIndex[8];
+            const firstSheet=doc.sheetsByIndex[10];
             const rows = await firstSheet.getRows();
             // console.log(rows);
 

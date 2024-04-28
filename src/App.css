@@ -50,5 +50,5 @@
   background-size: cover;
   background-position: center center; /* Center the image properly */
   background-repeat: repeat repeat-y; 
-  background-attachment: fixed; /* Optional: Fix the background relative to the viewport */
+  background-attachment: scroll; 
 }

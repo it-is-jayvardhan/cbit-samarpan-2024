@@ -165,7 +165,7 @@ export default function Navbar(props) {
 />
 </Grid>
 <Grid item xs={10}>
-<Typography variant={matches ? 'h4' : 'h6'}    color="black" sx={{backgroundColor:'transparent',fontFamily:"Times New Roman",fontWeight:"bold"}}>
+<Typography variant={matches ? 'h4' : 'h7'}    color="black" sx={{backgroundColor:'transparent',fontFamily:"Times New Roman",fontWeight:"bold"}}>
               C.BYREGOWDA INSTITUTE OF TECHNOLOGY
             </Typography>
             </Grid>

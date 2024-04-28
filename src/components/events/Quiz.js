@@ -100,7 +100,7 @@ export default function Quiz(){
                 const doc=new GoogleSpreadsheet(SHEET_ID,{apiKey:APIKEY});
            
             await doc.loadInfo();
-            const firstSheet=doc.sheetsByIndex[13];
+            const firstSheet=doc.sheetsByIndex[15];
             const rows = await firstSheet.getRows();
             // console.log(rows);
 

@@ -5,11 +5,11 @@ import OutdoorGrillIcon from '@mui/icons-material/OutdoorGrill';
 import QuizIcon from '@mui/icons-material/Quiz';
 // import SearchIcon from '@mui/icons-material/Search';
 import ExploreIcon from '@mui/icons-material/Explore';
-// import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
 // import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import GestureIcon from '@mui/icons-material/Gesture';
 import MicIcon from '@mui/icons-material/Mic';
-// import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import PublicIcon from '@mui/icons-material/Public';
 // import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
@@ -18,7 +18,7 @@ import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import BrushIcon from '@mui/icons-material/Brush';
 import Grid from '@mui/material/Grid';
-// import PaletteIcon from '@mui/icons-material/Palette';
+import PaletteIcon from '@mui/icons-material/Palette';
 import SpeakerIcon  from '@mui/icons-material/Speaker';
 import Button from '@mui/material/Button';
 // import Stack from '@mui/material/Stack';
@@ -37,14 +37,15 @@ export default function Participants(){
         { event: "Dumb Sharades", link: "/DumbSharades" ,icon: <GestureIcon/> },
         { event: "Cooking Without Fire", link: "/Cooking" ,icon: <OutdoorGrillIcon/> },
         { event: "Essay Writing", link: "/EssayWriting" ,icon: <EditIcon/>},
-        // { event: "Photography", link: "/Photography" ,icon: <CameraAltIcon/>},
+        { event: "Photography", link: "/Photography" ,icon: <CameraAltIcon/>},
+        { event: "Anthyakshari", link: "/Anthyakshari",icon: <MusicNoteIcon/> },
+        { event: "Painting", link: "/Painting",icon: <PaletteIcon/> },
         { event: "Singing", link: "/Singing" ,icon: <MicIcon/>},
         { event: "Rangoli", link: "/Rangoli" ,icon: <ColorLensIcon/>},
         { event: "Dance", link: "/Dance" ,icon: <DirectionsRunIcon/>},
         { event: "Debate", link: "/Debate" ,icon: <RecordVoiceOverIcon/>},
         { event: "Skit", link: "/Skit" ,icon: <TheaterComedyIcon/>},
         { event: "Quiz", link: "/Quiz" ,icon: <QuizIcon/>},
-        { event: "Painting", link: "/Painting",icon: <BrushIcon/> },
         { event: "Mehandi", link: "/Mehandi" ,icon: <BrushIcon/>},
         // Add more objects with different event, link, and icon values
       ];
@@ -57,12 +58,14 @@ export default function Participants(){
 <Grid container spacing={2} alignItems="center" justifyContent="flex-start" style={{ width: '100%', height: '65vh', padding: '30px 0 0 15px' }}>
   {data.map((item, index) => {
     // Determine if the item is 'Dance', 'Rangoli', or 'Mehandi'
-    const isSpecialItem = ['Singing','Rangoli','Dance', 'Debate', 'Skit','Quiz'].includes(item.event);
+    const isSpecialItem = ['Singing','Rangoli','Dance',].includes(item.event);
+    const isSpecialItemtwo = ['Debate','Skit','Quiz'].includes(item.event);
+    const displayitemmed = ['Dance','Debate','Skit','Quiz'].includes(item.event);
     // Determine if the item is 'Cooking Without Fire'
     // const isCookingWithoutFire = item.event === 'Cooking Without Fire';
 
     return (
-      <Grid item xs={isSpecialItem ? 4:6} sm={3} key={index} >
+      <Grid item xs={isSpecialItem ? 4:isSpecialItemtwo?4:6} sm={displayitemmed?2:3} key={index} >
         <Link to={item.link}>
           <Button startIcon={item.icon}
             variant="contained" 
@@ -79,6 +82,8 @@ export default function Participants(){
     );
   })}
 </Grid>
-
+<br/>
+  <br/>
+  <br/>
     </>)
 }

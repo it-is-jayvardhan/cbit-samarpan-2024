@@ -60,7 +60,7 @@ const Footer = () => {
 >
   © {new Date().getFullYear()} G R Prashanth Reddy. All rights reserved.
   <br />
-  Website created by G R Prashanth Reddy under the guidance of Prof Sujani Mam Dept of ECE,CBIT. Design help Madhan Gowda M.C
+  Website created by G R Prashanth Reddy under the guidance of Prof Sujani Mam Dept of ECE,CBIT. Design help Madhan Gowda C
  
 </Typography>
 

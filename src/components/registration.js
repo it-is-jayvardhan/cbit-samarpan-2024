@@ -4,7 +4,7 @@ export default function  Registration(){
     return(
         <div>
             {/* <h1>Event Calendar</h1> */}
-            <Typography variant="h3" style={{ 
+            <Typography variant="h4" style={{ 
   fontFamily: '"Feast of Flesh BB", cursive',
   color: 'white', 
   fontWeight: 'bold', 

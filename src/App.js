@@ -27,7 +27,7 @@ const DumbSharades=lazy(()=>import('./components/events/dumbSharades.js'));
 const Cooking=lazy(()=>import('./components/events/cookingWithoutFire.js'));
 const Winners=lazy(()=>import('./components/Winners.js'));
 const Gallery=lazy(()=>import('./components/Gallery.js'));
-
+const Anthyakshari=lazy(()=>import('./components/events/Anthyakshari.js'));
 function App() {
   useEffect(()=>{
     const birdsEffect =BIRDS({
@@ -83,6 +83,7 @@ function App() {
         <Route path="/Cooking" element={<Cooking/>}/>
         <Route path="/Winners" element={<Winners/>}/>
         <Route path="/Gallery" element={<Gallery/>}/>
+        <Route path="/Anthyakshari" element={<Anthyakshari/>}/>
         </Routes>
         </Suspense>
         <br/><br/><br/>
